@@ -1,7 +1,7 @@
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
-
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 # Command handler for /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Hello! I'm your bot. Send me a message, and I'll echo it back!")
